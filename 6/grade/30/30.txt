@@ -1,0 +1,30 @@
+(testing /course/cs4500f23/ta/tedium-workdir/testfest-results/6/30/Tests/0-in.json /course/cs4500f23/ta/tedium-workdir/testfest-results/6/30/Tests/0-out.json)
+Traceback (most recent call last):
+  File "/course/cs4500f23/ta/tedium-workdir/github/mysterious-mongooses/6/xstrategy", line 7, in <module>
+    from game_state import Json_io
+  File "/course/cs4500f23/ta/tedium-workdir/github/mysterious-mongooses/6/../Q/Common/game_state.py", line 7, in <module>
+    import pygame
+ModuleNotFoundError: No module named 'pygame'
+
+(testing /course/cs4500f23/ta/tedium-workdir/github/mysterious-mongooses/6/xstrategy)
+---------------------------------
+(*** score 0)
+(*** on)
+'(#hasheq((map . ((0 (0 #hasheq((color . "red") (shape . "square"))))))
+          (players
+           .
+           (#hasheq((score . 40)
+                    (tile* . (#hasheq((color . "red") (shape . "circle")))))
+            10))
+          (tile* . 100))
+  "dag")
+(*** expected)
+'(#hasheq((1tile . #hasheq((color . "red") (shape . "circle")))
+          (coordinate . #hasheq((column . 0) (row . -1)))))
+(*** but received)
+'(((plain fast with-newline plain-unicode) ()))
+
+
+()
+((passed 0) (total 1) (partial-score 0))
+

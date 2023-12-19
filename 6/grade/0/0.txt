@@ -1,0 +1,104 @@
+(testing /course/cs4500f23/ta/tedium-workdir/testfest-results/6/0/Tests/0-in.json /course/cs4500f23/ta/tedium-workdir/testfest-results/6/0/Tests/0-out.json)
+Traceback (most recent call last):
+  File "/course/cs4500f23/ta/tedium-workdir/github/mysterious-mongooses/6/xstrategy", line 7, in <module>
+    from game_state import Json_io
+  File "/course/cs4500f23/ta/tedium-workdir/github/mysterious-mongooses/6/../Q/Common/game_state.py", line 7, in <module>
+    import pygame
+ModuleNotFoundError: No module named 'pygame'
+(testing /course/cs4500f23/ta/tedium-workdir/testfest-results/6/0/Tests/3-in.json /course/cs4500f23/ta/tedium-workdir/testfest-results/6/0/Tests/3-out.json)
+Traceback (most recent call last):
+  File "/course/cs4500f23/ta/tedium-workdir/github/mysterious-mongooses/6/xstrategy", line 7, in <module>
+    from game_state import Json_io
+  File "/course/cs4500f23/ta/tedium-workdir/github/mysterious-mongooses/6/../Q/Common/game_state.py", line 7, in <module>
+    import pygame
+ModuleNotFoundError: No module named 'pygame'
+(testing /course/cs4500f23/ta/tedium-workdir/testfest-results/6/0/Tests/4-in.json /course/cs4500f23/ta/tedium-workdir/testfest-results/6/0/Tests/4-out.json)
+Traceback (most recent call last):
+  File "/course/cs4500f23/ta/tedium-workdir/github/mysterious-mongooses/6/xstrategy", line 7, in <module>
+    from game_state import Json_io
+  File "/course/cs4500f23/ta/tedium-workdir/github/mysterious-mongooses/6/../Q/Common/game_state.py", line 7, in <module>
+    import pygame
+ModuleNotFoundError: No module named 'pygame'
+
+(testing /course/cs4500f23/ta/tedium-workdir/github/mysterious-mongooses/6/xstrategy)
+---------------------------------
+(*** score 0)
+(*** on)
+'(#hasheq((map
+           .
+           ((0
+             (0 #hasheq((color . "purple") (shape . "square")))
+             (1 #hasheq((color . "orange") (shape . "square"))))
+            (1 (1 #hasheq((color . "orange") (shape . "square"))))
+            (2
+             (0 #hasheq((color . "orange") (shape . "diamond")))
+             (1 #hasheq((color . "orange") (shape . "square"))))))
+          (players
+           .
+           (#hasheq((score . 50)
+                    (tile*
+                     .
+                     (#hasheq((color . "yellow") (shape . "8star"))
+                      #hasheq((color . "orange") (shape . "square"))
+                      #hasheq((color . "green") (shape . "star"))
+                      #hasheq((color . "red") (shape . "star")))))
+            4
+            5))
+          (tile* . 100))
+  "ldasg")
+(*** expected)
+'(#hasheq((1tile . #hasheq((color . "orange") (shape . "square")))
+          (coordinate . #hasheq((column . 0) (row . -1)))))
+(*** but received)
+'(((plain fast with-newline plain-unicode) ()))
+
+
+---------------------------------
+(*** score 0)
+(*** on)
+'(#hasheq((map . ((0 (0 #hasheq((color . "purple") (shape . "square"))))))
+          (players
+           .
+           (#hasheq((score . 90)
+                    (tile*
+                     .
+                     (#hasheq((color . "green") (shape . "8star"))
+                      #hasheq((color . "yellow") (shape . "star"))
+                      #hasheq((color . "red") (shape . "diamond"))
+                      #hasheq((color . "orange") (shape . "circle")))))
+            120
+            67))
+          (tile* . 3))
+  "dag")
+(*** expected)
+'("pass")
+(*** but received)
+'(((plain fast with-newline plain-unicode) ()))
+
+
+---------------------------------
+(*** score 0)
+(*** on)
+'(#hasheq((map . ((0 (0 #hasheq((color . "orange") (shape . "8star"))))))
+          (players
+           .
+           (#hasheq((score . 100)
+                    (tile*
+                     .
+                     (#hasheq((color . "purple") (shape . "diamond"))
+                      #hasheq((color . "purple") (shape . "diamond"))
+                      #hasheq((color . "purple") (shape . "diamond"))
+                      #hasheq((color . "purple") (shape . "diamond")))))
+            1
+            2))
+          (tile* . 5))
+  "dag")
+(*** expected)
+'("replace")
+(*** but received)
+'(((plain fast with-newline plain-unicode) ()))
+
+
+()
+((passed 0) (total 3) (partial-score 0))
+

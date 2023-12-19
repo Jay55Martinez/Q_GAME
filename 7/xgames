@@ -1,0 +1,22 @@
+#!/usr/bin/env python3
+
+import sys
+sys.path.insert(0, '../Q/Common')
+sys.path.insert(0, '../Q/Referee')
+sys.path.insert(0, '../Q/Player')
+from json_io import Json_io
+from referee import Referee, run_without_view
+
+def main():
+    input_objects = Json_io.decode_stacked(sys.stdin.read())
+    parsed_objects = [elem for elem in input_objects]
+    
+    state = Json_io.from_j_state_and_players(parsed_objects[0], parsed_objects[1])
+    referee = Referee([], state=state)
+
+    winner, kicked_players = run_without_view(referee)
+
+    print(Json_io.to_j_names([winner], kicked_players), end="")
+
+if __name__ == '__main__':
+    main()

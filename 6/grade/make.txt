@@ -1,0 +1,11 @@
+python3.9 Other/setup.py
+Defaulting to user installation because normal site-packages is not writeable
+Requirement already satisfied: json-stream in /course/cs4500f23/ta/.local/lib/python3.9/site-packages (2.3.2)
+Requirement already satisfied: json-stream-rs-tokenizer>=0.4.17 in /course/cs4500f23/ta/.local/lib/python3.9/site-packages (from json-stream) (0.4.23)
+Defaulting to user installation because normal site-packages is not writeable
+Requirement already satisfied: pytest in /course/cs4500f23/ta/.local/lib/python3.9/site-packages (7.4.2)
+Requirement already satisfied: pluggy<2.0,>=0.12 in /course/cs4500f23/ta/.local/lib/python3.9/site-packages (from pytest) (1.3.0)
+Requirement already satisfied: iniconfig in /course/cs4500f23/ta/.local/lib/python3.9/site-packages (from pytest) (2.0.0)
+Requirement already satisfied: exceptiongroup>=1.0.0rc8; python_version < "3.11" in /course/cs4500f23/ta/.local/lib/python3.9/site-packages (from pytest) (1.1.3)
+Requirement already satisfied: packaging in /course/cs4500f23/ta/.local/lib/python3.9/site-packages (from pytest) (23.1)
+Requirement already satisfied: tomli>=1.0.0; python_version < "3.11" in /course/cs4500f23/ta/.local/lib/python3.9/site-packages (from pytest) (2.0.1)

@@ -1,0 +1,15 @@
+Delivery
+0/5 pts: Deliverable 4/xlegal not found
+5/5 pts: Deliverable Q/Common/game-state.PP exists
+5/5 pts: Deliverable Q/Planning/player-protocol.md exists
+0/5 pts: Extra or missing tests
+
+Functionality
+0/15 pts: Unable to run tests (see test-results.txt)
+0/25 pts: 0 valid tests (see test-audit-results.txt)
+0/25 bonus pts (other teams failing your tests)
+
+Inspection
+15/70 pts: See inspection.md
+
+Total: 25/130 pts

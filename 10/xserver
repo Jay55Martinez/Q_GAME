@@ -1,0 +1,25 @@
+#!/usr/bin/env python3
+import sys
+import json
+sys.path.insert(0, '../Q/Common')
+from public_game_state import PublicState
+sys.path.insert(0, '../Q/Player')
+from strategy import Strategy
+sys.path.insert(0, '../Q/Server')
+from server import Server
+
+def main():
+    
+    port = int(sys.argv[1])
+    configs = json.loads(sys.stdin.read())
+    
+    configs['port'] = port
+    
+    test_server = Server(configs)
+    test_server.start_listening()
+    x = test_server.ready_to_run()
+    print(x)
+    return x
+
+if __name__ == '__main__':
+    main()

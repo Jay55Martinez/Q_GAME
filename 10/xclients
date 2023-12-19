@@ -1,0 +1,41 @@
+#!/usr/bin/env python3
+import sys
+import json
+import time
+import threading
+sys.path.insert(0, '../Q/Common')
+from json_io import Json_io
+sys.path.insert(0, '../Q/Client')
+from client import Client
+
+def client_startup(client, wait):
+    time.sleep(wait)
+    client.start_client()
+
+def main():
+    port = int(sys.argv[1])
+    configs = sys.stdin.read()
+    clients_config = Json_io.from_j_client_config(configs)
+    wait_time = clients_config['wait']
+    single_client_config = clients_config
+    clients = []
+    
+    for player in clients_config['players']:
+        single_client_config['player'] = player
+        new_client = Client(single_client_config) 
+        clients.append(new_client)      
+    
+
+    threads = []
+    for client in clients:
+        thread = threading.Thread(target=client_startup, args=(client,wait_time))
+        threads.append(thread)
+        thread.start()
+    
+    for thread in threads:
+        thread.join()
+    
+        
+
+if __name__ == '__main__':
+    main()

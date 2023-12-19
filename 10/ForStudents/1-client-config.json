@@ -1,0 +1,17 @@
+{
+    "host": "127.0.0.1",
+    "players": [
+        [
+            "A",
+            "dag"
+        ],
+        [
+            "xnX",
+            "ldasg",
+            "setup"
+        ]
+    ],
+    "port": 45676,
+    "quiet": true,
+    "wait": 2
+}

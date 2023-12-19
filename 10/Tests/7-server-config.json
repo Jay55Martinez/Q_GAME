@@ -1,0 +1,22 @@
+{
+    "port": 11111,
+    "server-tries": 2,
+    "server-wait": 15,
+    "wait-for-signup": 8,
+    "quiet": true,
+    "ref-spec": {
+      "state0": {
+        "map": [
+          [0, [0,{"color":"green","shape":"diamond"}]]
+        ],
+        "tile*": [{"color":"green","shape":"diamond"},{"color":"green","shape":"circle"}, {"color":"green","shape":"8star"},{"color":"green","shape":"star"},{"color":"green","shape":"square"},{"color":"purple","shape":"diamond"}, {"color": "red", "shape": "circle"}, {"color": "red", "shape": "star"}, {"color": "blue", "shape": "8star"}, {"color": "purple", "shape": "clover"}, {"color": "orange", "shape": "diamond"}, {"color":"green","shape":"diamond"},{"color":"green","shape":"circle"}, {"color":"green","shape":"8star"},{"color":"green","shape":"star"},{"color":"green","shape":"square"},{"color":"purple","shape":"diamond"}, {"color": "red", "shape": "circle"}, {"color": "red", "shape": "star"}, {"color": "blue", "shape": "8star"}, {"color": "purple", "shape": "clover"}, {"color": "orange", "shape": "diamond"}],
+        "players": [
+            {"score": 0, "name": "Bob", "tile*": []}
+        ]
+      },
+      "quiet": true,
+      "config-s": {"qbo": 8, "fbo": 4},
+      "per-turn": 6,
+      "observe": true
+    }
+  }  

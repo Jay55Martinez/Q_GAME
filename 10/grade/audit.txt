@@ -1,0 +1,397 @@
+(testing /course/cs4500f23/ta/23SwDev/Code/10/xclients /course/cs4500f23/ta/23SwDev/Code/10/xserver)
+(testing /course/cs4500f23/ta/tedium-workdir/github/whimsical-camels/10/Tests/0-in.json /course/cs4500f23/ta/tedium-workdir/github/whimsical-camels/10/Tests/0-out.json)
+WARNING: no observer expected during test fest; given #t
+(testing /course/cs4500f23/ta/tedium-workdir/github/whimsical-camels/10/Tests/1-in.json /course/cs4500f23/ta/tedium-workdir/github/whimsical-camels/10/Tests/1-out.json)
+WARNING: no observer expected during test fest; given #t
+names differ:
+ state players (Alice Bob Charlie)
+ given players (Bob Alice Charlie)
+server reports referee failure
+set-ref-state-players: contract violation;
+ same order of names
+      s: '#s(state #hash((#s(coordinate 1 0) . #s(tile circle green)) (#s(coordinate 1 2) . #s(tile diamond blue)) (#s(coordinate 0 0) . #s(tile square red)) (#s(coordinate 0 1) . #s(tile circle red))) (#s(sop 0 (#s(tile square blue)) "Alice") #s(sop 2 (#s(tile ...
+      lop: (list (object:remote-player% ...) (object:remote-player% ...) (object:remote-player% ...))
+  in: (->i
+       ((s state?)
+        (lop (listof (instanceof/c player%/c))))
+       #:pre/name
+       (s lop)
+       "same number of player representations and player objects expected"
+       (= (length (state-players s)) (length lop))
+       #:pre/name
+       (lop)
+       "distinct external names"
+       (distinct? (map (λ (p) (send p name)) lop))
+       #:pre/name
+       (s lop)
+       "same order of names"
+       (or (dont-double-check-names)
+           (same-order-of-names
+            (state-players s)
+            lop))
+       (r state?))
+  contract from: 
+      <pkgs>/Qwirkle/Referee/ref-state.rkt
+  blaming: <pkgs>/Qwirkle/Referee/referee.rkt
+   (assuming the contract is correct)
+  at: <pkgs>/Qwirkle/Referee/ref-state.rkt:73:3
+---------------------------------
+(*** score 0)
+(*** on)
+'(#hasheq((port . 20000)
+          (quiet . #t)
+          (ref-spec
+           .
+           #hasheq((config-s . #hasheq((fbo . 3) (qbo . 7)))
+                   (observe . #t)
+                   (per-turn . 4)
+                   (quiet . #f)
+                   (state0
+                    .
+                    #hasheq((map
+                             .
+                             ((0
+                               (0 #hasheq((color . "red") (shape . "square")))
+                               (1 #hasheq((color . "red") (shape . "circle"))))
+                              (1
+                               (2
+                                #hasheq((color . "blue") (shape . "diamond")))
+                               (0
+                                #hasheq((color . "green")
+                                        (shape . "circle"))))))
+                            (players
+                             .
+                             (#hasheq((name . "Alice")
+                                      (score . 0)
+                                      (tile*
+                                       .
+                                       (#hasheq((color . "blue")
+                                                (shape . "square")))))
+                              #hasheq((name . "Bob")
+                                      (score . 2)
+                                      (tile*
+                                       .
+                                       (#hasheq((color . "red")
+                                                (shape . "circle")))))
+                              #hasheq((name . "Charlie")
+                                      (score . 1)
+                                      (tile*
+                                       .
+                                       (#hasheq((color . "green")
+                                                (shape . "square")))))))
+                            (tile*
+                             .
+                             (#hasheq((color . "red") (shape . "circle"))
+                              #hasheq((color . "green") (shape . "square"))
+                              #hasheq((color . "blue")
+                                      (shape . "diamond"))))))))
+          (server-tries . 5)
+          (server-wait . 15)
+          (wait-for-signup . 7))
+  #hasheq((host . "127.0.0.1")
+          (players
+           .
+           (("Bob" "dag")
+            ("Alice" "dag" "take-turn" 2)
+            ("Charlie" "dag" "take-turn")))
+          (port . 20000)
+          (quiet . #t)
+          (wait . 4)))
+(*** expected)
+'((("Bob") ("Alice" "Charlie")))
+(*** but received)
+'(((plain fast with-newline plain-unicode) ((() ()))))
+
+
+(testing /course/cs4500f23/ta/tedium-workdir/github/whimsical-camels/10/Tests/2-in.json /course/cs4500f23/ta/tedium-workdir/github/whimsical-camels/10/Tests/2-out.json)
+names differ:
+ state players (Alice Bob Charlie)
+ given players (Bob Alice Charlie)
+server reports referee failure
+set-ref-state-players: contract violation;
+ same order of names
+      s: '#s(state #hash((#s(coordinate 1 0) . #s(tile circle green)) (#s(coordinate 1 2) . #s(tile diamond blue)) (#s(coordinate 0 0) . #s(tile square red)) (#s(coordinate 0 1) . #s(tile circle red))) (#s(sop 0 (#s(tile star yellow)) "Alice") #s(sop 2 (#s(tile ...
+      lop: (list (object:remote-player% ...) (object:remote-player% ...) (object:remote-player% ...))
+  in: (->i
+       ((s state?)
+        (lop (listof (instanceof/c player%/c))))
+       #:pre/name
+       (s lop)
+       "same number of player representations and player objects expected"
+       (= (length (state-players s)) (length lop))
+       #:pre/name
+       (lop)
+       "distinct external names"
+       (distinct? (map (λ (p) (send p name)) lop))
+       #:pre/name
+       (s lop)
+       "same order of names"
+       (or (dont-double-check-names)
+           (same-order-of-names
+            (state-players s)
+            lop))
+       (r state?))
+  contract from: 
+      <pkgs>/Qwirkle/Referee/ref-state.rkt
+  blaming: <pkgs>/Qwirkle/Referee/referee.rkt
+   (assuming the contract is correct)
+  at: <pkgs>/Qwirkle/Referee/ref-state.rkt:73:3
+---------------------------------
+(*** score 0)
+(*** on)
+'(#hasheq((port . 30000)
+          (quiet . #f)
+          (ref-spec
+           .
+           #hasheq((config-s . #hasheq((fbo . 2) (qbo . 6)))
+                   (observe . #f)
+                   (per-turn . 5)
+                   (quiet . #t)
+                   (state0
+                    .
+                    #hasheq((map
+                             .
+                             ((0
+                               (0 #hasheq((color . "red") (shape . "square")))
+                               (1 #hasheq((color . "red") (shape . "circle"))))
+                              (1
+                               (2
+                                #hasheq((color . "blue") (shape . "diamond")))
+                               (0
+                                #hasheq((color . "green")
+                                        (shape . "circle"))))))
+                            (players
+                             .
+                             (#hasheq((name . "Alice")
+                                      (score . 0)
+                                      (tile*
+                                       .
+                                       (#hasheq((color . "yellow")
+                                                (shape . "star")))))
+                              #hasheq((name . "Bob")
+                                      (score . 2)
+                                      (tile*
+                                       .
+                                       (#hasheq((color . "red")
+                                                (shape . "circle")))))
+                              #hasheq((name . "Charlie")
+                                      (score . 1)
+                                      (tile*
+                                       .
+                                       (#hasheq((color . "green")
+                                                (shape . "square")))))))
+                            (tile*
+                             .
+                             (#hasheq((color . "red") (shape . "circle"))
+                              #hasheq((color . "green") (shape . "square"))
+                              #hasheq((color . "blue")
+                                      (shape . "diamond"))))))))
+          (server-tries . 3)
+          (server-wait . 10)
+          (wait-for-signup . 5))
+  #hasheq((host . "127.0.0.1")
+          (players . (("Bob" "dag") ("Alice" "dag") ("Charlie" "dag")))
+          (port . 20000)
+          (quiet . #t)
+          (wait . 4)))
+(*** expected)
+'((("Bob") ()))
+(*** but received)
+'(((plain fast with-newline plain-unicode) ((() ()))))
+
+
+(testing /course/cs4500f23/ta/tedium-workdir/github/whimsical-camels/10/Tests/3-in.json /course/cs4500f23/ta/tedium-workdir/github/whimsical-camels/10/Tests/3-out.json)
+(testing /course/cs4500f23/ta/tedium-workdir/github/whimsical-camels/10/Tests/4-in.json /course/cs4500f23/ta/tedium-workdir/github/whimsical-camels/10/Tests/4-out.json)
+player counts dont match:
+ in state:   3
+ in players: 2
+server reports referee failure
+referee/config: contract violation;
+ matching number of players
+      config: '#hash((CONFIG-S2896 . #hash((FBO2887 . 2) (QBO2886 . 6))) (OBSERVE2898 . #<procedure:void>) (PER-TURN2897 . 5) (QUIET2895 . #t) (STATE02894 . #s(state #hash((#s(coordinate 1 0) . #s(tile circle green)) (#s(coordinate 1 2) . #s(tile diamond blue)) (#s(c...
+      players: (list (object:remote-player% ...) (object:remote-player% ...))
+  in: (->i
+       ((config
+         (and/c
+          (hash/c any/c any/c)
+          ...b/hash-contract.rkt:13:3))
+        (players
+         (listof (instanceof/c player%/c))))
+       #:pre/name
+       (players)
+       "players must have distince names"
+       (distinct?
+        (map (λ (p) (send p name)) players))
+       #:pre/name
+       (config players)
+       "matching number of players"
+       (matching-number config players)
+       (r
+        (list/c
+         (listof string?)
+         (listof string?))))
+  contract from: 
+      <pkgs>/Qwirkle/Referee/referee.rkt
+  blaming: <pkgs>/Qwirkle/Server/server.rkt
+   (assuming the contract is correct)
+  at: <pkgs>/Qwirkle/Referee/referee.rkt:48:3
+---------------------------------
+(*** score 0)
+(*** on)
+'(#hasheq((port . 30000)
+          (quiet . #f)
+          (ref-spec
+           .
+           #hasheq((config-s . #hasheq((fbo . 2) (qbo . 6)))
+                   (observe . #f)
+                   (per-turn . 5)
+                   (quiet . #t)
+                   (state0
+                    .
+                    #hasheq((map
+                             .
+                             ((0
+                               (0 #hasheq((color . "red") (shape . "square")))
+                               (1 #hasheq((color . "red") (shape . "circle"))))
+                              (1
+                               (2
+                                #hasheq((color . "blue") (shape . "diamond")))
+                               (0
+                                #hasheq((color . "green")
+                                        (shape . "circle"))))))
+                            (players
+                             .
+                             (#hasheq((name . "Bob")
+                                      (score . 100000)
+                                      (tile*
+                                       .
+                                       (#hasheq((color . "yellow")
+                                                (shape . "star"))
+                                        #hasheq((color . "green")
+                                                (shape . "circle"))
+                                        #hasheq((color . "blue")
+                                                (shape . "square"))
+                                        #hasheq((color . "red")
+                                                (shape . "circle"))
+                                        #hasheq((color . "purple")
+                                                (shape . "diamond"))
+                                        #hasheq((color . "orange")
+                                                (shape . "square")))))
+                              #hasheq((name . "Alice")
+                                      (score . 0)
+                                      (tile*
+                                       .
+                                       (#hasheq((color . "red")
+                                                (shape . "circle"))
+                                        #hasheq((color . "blue")
+                                                (shape . "diamond"))
+                                        #hasheq((color . "green")
+                                                (shape . "square"))
+                                        #hasheq((color . "purple")
+                                                (shape . "star"))
+                                        #hasheq((color . "yellow")
+                                                (shape . "circle"))
+                                        #hasheq((color . "orange")
+                                                (shape . "circle")))))
+                              #hasheq((name . "Charlie")
+                                      (score . 0)
+                                      (tile*
+                                       .
+                                       (#hasheq((color . "purple")
+                                                (shape . "square"))
+                                        #hasheq((color . "red")
+                                                (shape . "star"))
+                                        #hasheq((color . "blue")
+                                                (shape . "circle"))
+                                        #hasheq((color . "green")
+                                                (shape . "diamond"))
+                                        #hasheq((color . "yellow")
+                                                (shape . "star"))
+                                        #hasheq((color . "orange")
+                                                (shape . "diamond")))))))
+                            (tile*
+                             .
+                             (#hasheq((color . "red") (shape . "circle"))
+                              #hasheq((color . "green") (shape . "square"))
+                              #hasheq((color . "blue")
+                                      (shape . "diamond"))))))))
+          (server-tries . 2)
+          (server-wait . 3)
+          (wait-for-signup . 4))
+  #hasheq((host . "127.0.0.1")
+          (players . (("Bob" "dag") ("Alice" "dag") ("Charlie" "dag")))
+          (port . 20000)
+          (quiet . #t)
+          (wait . 4)))
+(*** expected)
+'((("Bob") ()))
+(*** but received)
+'(((plain fast with-newline plain-unicode) ((() ()))))
+
+
+(testing /course/cs4500f23/ta/tedium-workdir/github/whimsical-camels/10/Tests/5-in.json /course/cs4500f23/ta/tedium-workdir/github/whimsical-camels/10/Tests/5-out.json)
+WARNING: no observer expected during test fest; given #t
+(testing /course/cs4500f23/ta/tedium-workdir/github/whimsical-camels/10/Tests/6-in.json /course/cs4500f23/ta/tedium-workdir/github/whimsical-camels/10/Tests/6-out.json)
+jsexpr->state/general : object does not match state/general schema
+ {"map":[[0,[0,{"color":"green","shape":"diamond"}]]],"players":[],"tile*":[{"color":"green","shape":"diamond"},{"color":"green","shape":"circle"},{"color":"green","shape":"8star"},{"color":"green","shape":"star"},{"color":"green","shape":"square"},{"color":"purple","shape":"diamond"},{"color":"red","shape":"circle"},{"color":"red","shape":"star"},{"color":"blue","shape":"8star"},{"color":"purple","shape":"clover"},{"color":"orange","shape":"diamond"},{"color":"green","shape":"diamond"},{"color":"green","shape":"circle"},{"color":"green","shape":"8star"},{"color":"green","shape":"star"},{"color":"green","shape":"square"},{"color":"purple","shape":"diamond"},{"color":"red","shape":"circle"},{"color":"red","shape":"star"},{"color":"blue","shape":"8star"},{"color":"purple","shape":"clover"},{"color":"orange","shape":"diamond"}]}
+WARNING: no observer expected during test fest; given #t
+(testing /course/cs4500f23/ta/tedium-workdir/github/whimsical-camels/10/Tests/7-in.json /course/cs4500f23/ta/tedium-workdir/github/whimsical-camels/10/Tests/7-out.json)
+WARNING: no observer expected during test fest; given #t
+(testing /course/cs4500f23/ta/tedium-workdir/github/whimsical-camels/10/Tests/8-in.json /course/cs4500f23/ta/tedium-workdir/github/whimsical-camels/10/Tests/8-out.json)
+WARNING: no observer expected during test fest; given #t
+---------------------------------
+(*** score 0)
+(*** on)
+'(#hasheq((port . 11111)
+          (quiet . #t)
+          (ref-spec
+           .
+           #hasheq((config-s . #hasheq((fbo . 4) (qbo . 8)))
+                   (observe . #t)
+                   (per-turn . 6)
+                   (quiet . #t)
+                   (state0
+                    .
+                    #hasheq((map
+                             .
+                             ((0
+                               (0
+                                #hasheq((color . "green")
+                                        (shape . "diamond"))))))
+                            (players
+                             .
+                             (#hasheq((name . "Bob")
+                                      (score . 0)
+                                      (tile*
+                                       .
+                                       (#hasheq((color . "blue")
+                                                (shape . "square"))
+                                        #hasheq((color . "blue")
+                                                (shape . "diamond")))))
+                              #hasheq((name . "Mike")
+                                      (score . 0)
+                                      (tile*
+                                       .
+                                       (#hasheq((color . "orange")
+                                                (shape . "star"))
+                                        #hasheq((color . "red")
+                                                (shape . "8star")))))))
+                            (tile* . ())))))
+          (server-tries . 3)
+          (server-wait . 20)
+          (wait-for-signup . 8))
+  #hasheq((host . "127.0.0.1")
+          (players . (("Bob" "dag")))
+          (port . 11111)
+          (quiet . #t)
+          (wait . 4)))
+(*** expected)
+'((("Bob") ()))
+(*** but received)
+'(((plain fast with-newline plain-unicode) ((() ()))))
+
+
+(testing /course/cs4500f23/ta/tedium-workdir/github/whimsical-camels/10/Tests/9-in.json /course/cs4500f23/ta/tedium-workdir/github/whimsical-camels/10/Tests/9-out.json)
+WARNING: no observer expected during test fest; given #t
+((/course/cs4500f23/ta/tedium-workdir/github/whimsical-camels/10/Tests/0-in.json /course/cs4500f23/ta/tedium-workdir/github/whimsical-camels/10/Tests/0-out.json) (/course/cs4500f23/ta/tedium-workdir/github/whimsical-camels/10/Tests/3-in.json /course/cs4500f23/ta/tedium-workdir/github/whimsical-camels/10/Tests/3-out.json) (/course/cs4500f23/ta/tedium-workdir/github/whimsical-camels/10/Tests/5-in.json /course/cs4500f23/ta/tedium-workdir/github/whimsical-camels/10/Tests/5-out.json) (/course/cs4500f23/ta/tedium-workdir/github/whimsical-camels/10/Tests/6-in.json /course/cs4500f23/ta/tedium-workdir/github/whimsical-camels/10/Tests/6-out.json) (/course/cs4500f23/ta/tedium-workdir/github/whimsical-camels/10/Tests/7-in.json /course/cs4500f23/ta/tedium-workdir/github/whimsical-camels/10/Tests/7-out.json) (/course/cs4500f23/ta/tedium-workdir/github/whimsical-camels/10/Tests/9-in.json /course/cs4500f23/ta/tedium-workdir/github/whimsical-camels/10/Tests/9-out.json))
+((passed 6) (total 10) (partial-score 6))

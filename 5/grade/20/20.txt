@@ -1,0 +1,128 @@
+(testing /course/cs4500f23/ta/tedium-workdir/github/mysterious-mongooses/5/xscore)
+(testing /course/cs4500f23/ta/tedium-workdir/testfest-results/5/20/Tests/0-in.json /course/cs4500f23/ta/tedium-workdir/testfest-results/5/20/Tests/0-out.json)
+Traceback (most recent call last):
+  File "/course/cs4500f23/ta/tedium-workdir/github/mysterious-mongooses/5/xscore", line 6, in <module>
+    from game_state import *
+  File "/course/cs4500f23/ta/tedium-workdir/github/mysterious-mongooses/5/../Q/Common/game_state.py", line 6, in <module>
+    import pygame
+ModuleNotFoundError: No module named 'pygame'
+---------------------------------
+(*** score 0)
+(*** on)
+'(((-6 (0 #hasheq((color . "orange") (shape . "clover"))))
+   (-5 (0 #hasheq((color . "orange") (shape . "square"))))
+   (-4 (0 #hasheq((color . "orange") (shape . "diamond"))))
+   (-3 (0 #hasheq((color . "orange") (shape . "star"))))
+   (-2 (0 #hasheq((color . "orange") (shape . "circle"))))
+   (-1 (0 #hasheq((color . "orange") (shape . "8star")))))
+  (#hasheq((1tile . #hasheq((color . "orange") (shape . "clover")))
+           (coordinate . #hasheq((column . 0) (row . -6))))))
+(*** expected)
+'(13)
+(*** but received)
+'(((plain fast with-newline plain-unicode) ()))
+
+
+(testing /course/cs4500f23/ta/tedium-workdir/testfest-results/5/20/Tests/1-in.json /course/cs4500f23/ta/tedium-workdir/testfest-results/5/20/Tests/1-out.json)
+Traceback (most recent call last):
+  File "/course/cs4500f23/ta/tedium-workdir/github/mysterious-mongooses/5/xscore", line 6, in <module>
+    from game_state import *
+  File "/course/cs4500f23/ta/tedium-workdir/github/mysterious-mongooses/5/../Q/Common/game_state.py", line 6, in <module>
+    import pygame
+ModuleNotFoundError: No module named 'pygame'
+---------------------------------
+(*** score 0)
+(*** on)
+'(((-6 (0 #hasheq((color . "orange") (shape . "clover"))))
+   (-5 (0 #hasheq((color . "orange") (shape . "square"))))
+   (-4 (0 #hasheq((color . "orange") (shape . "diamond"))))
+   (-3 (0 #hasheq((color . "orange") (shape . "star"))))
+   (-2 (0 #hasheq((color . "orange") (shape . "circle"))))
+   (-1 (0 #hasheq((color . "orange") (shape . "8star"))))
+   (0 (0 #hasheq((color . "orange") (shape . "clover")))))
+  (#hasheq((1tile . #hasheq((color . "orange") (shape . "clover")))
+           (coordinate . #hasheq((column . 0) (row . -6))))
+   #hasheq((1tile . #hasheq((color . "orange") (shape . "clover")))
+           (coordinate . #hasheq((column . 0) (row . 0))))))
+(*** expected)
+'(9)
+(*** but received)
+'(((plain fast with-newline plain-unicode) ()))
+
+
+(testing /course/cs4500f23/ta/tedium-workdir/testfest-results/5/20/Tests/3-in.json /course/cs4500f23/ta/tedium-workdir/testfest-results/5/20/Tests/3-out.json)
+Traceback (most recent call last):
+  File "/course/cs4500f23/ta/tedium-workdir/github/mysterious-mongooses/5/xscore", line 6, in <module>
+    from game_state import *
+  File "/course/cs4500f23/ta/tedium-workdir/github/mysterious-mongooses/5/../Q/Common/game_state.py", line 6, in <module>
+    import pygame
+ModuleNotFoundError: No module named 'pygame'
+---------------------------------
+(*** score 0)
+(*** on)
+'(((-1
+    (1 #hasheq((color . "purple") (shape . "star")))
+    (2 #hasheq((color . "red") (shape . "star")))
+    (3 #hasheq((color . "blue") (shape . "star")))
+    (4 #hasheq((color . "green") (shape . "star")))
+    (5 #hasheq((color . "orange") (shape . "star")))
+    (6 #hasheq((color . "yellow") (shape . "star")))))
+  (#hasheq((1tile . #hasheq((color . "purple") (shape . "star")))
+           (coordinate . #hasheq((column . 1) (row . -1))))
+   #hasheq((1tile . #hasheq((color . "red") (shape . "star")))
+           (coordinate . #hasheq((column . 2) (row . -1))))
+   #hasheq((1tile . #hasheq((color . "blue") (shape . "star")))
+           (coordinate . #hasheq((column . 3) (row . -1))))
+   #hasheq((1tile . #hasheq((color . "green") (shape . "star")))
+           (coordinate . #hasheq((column . 4) (row . -1))))
+   #hasheq((1tile . #hasheq((color . "orange") (shape . "star")))
+           (coordinate . #hasheq((column . 5) (row . -1))))))
+(*** expected)
+'(17)
+(*** but received)
+'(((plain fast with-newline plain-unicode) ()))
+
+
+(testing /course/cs4500f23/ta/tedium-workdir/testfest-results/5/20/Tests/4-in.json /course/cs4500f23/ta/tedium-workdir/testfest-results/5/20/Tests/4-out.json)
+Traceback (most recent call last):
+  File "/course/cs4500f23/ta/tedium-workdir/github/mysterious-mongooses/5/xscore", line 6, in <module>
+    from game_state import *
+  File "/course/cs4500f23/ta/tedium-workdir/github/mysterious-mongooses/5/../Q/Common/game_state.py", line 6, in <module>
+    import pygame
+ModuleNotFoundError: No module named 'pygame'
+---------------------------------
+(*** score 0)
+(*** on)
+'(((-1
+    (1 #hasheq((color . "purple") (shape . "star")))
+    (2 #hasheq((color . "red") (shape . "star")))
+    (3 #hasheq((color . "blue") (shape . "star")))
+    (4 #hasheq((color . "green") (shape . "star")))
+    (5 #hasheq((color . "orange") (shape . "star")))
+    (6 #hasheq((color . "yellow") (shape . "star"))))
+   (0 (1 #hasheq((color . "purple") (shape . "diamond"))))
+   (1 (1 #hasheq((color . "purple") (shape . "circle"))))
+   (2 (1 #hasheq((color . "purple") (shape . "square"))))
+   (3 (1 #hasheq((color . "purple") (shape . "8star"))))
+   (4 (1 #hasheq((color . "purple") (shape . "clover")))))
+  (#hasheq((1tile . #hasheq((color . "purple") (shape . "star")))
+           (coordinate . #hasheq((column . 1) (row . -1))))
+   #hasheq((1tile . #hasheq((color . "purple") (shape . "diamond")))
+           (coordinate . #hasheq((column . 1) (row . 0))))
+   #hasheq((1tile . #hasheq((color . "purple") (shape . "circle")))
+           (coordinate . #hasheq((column . 1) (row . 1))))
+   #hasheq((1tile . #hasheq((color . "purple") (shape . "square")))
+           (coordinate . #hasheq((column . 1) (row . 2))))
+   #hasheq((1tile . #hasheq((color . "purple") (shape . "8star")))
+           (coordinate . #hasheq((column . 1) (row . 3))))
+   #hasheq((1tile . #hasheq((color . "purple") (shape . "clover")))
+           (coordinate . #hasheq((column . 1) (row . 4))))))
+(*** expected)
+'(30)
+(*** but received)
+'(((plain fast with-newline plain-unicode) ()))
+
+
+()
+((passed 0) (total 4) (partial-score 0))
+

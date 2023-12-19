@@ -1,0 +1,17 @@
+Delivery
+5/5 pts: Deliverable 5/xscore exists with the right permissions
+5/5 pts: Deliverable Q/Planning/referee-state.md exists
+5/5 pts: Deliverable Q/Player/strategy.PP exists
+5/5 pts: Delivery of test files
+
+Functionality
+0/25 pts: Passed 0 out of 5 tests (see test-results.txt)
+20/25 pts: 4 valid tests (see test-audit-results.txt)
+25/25 bonus pts (other teams failing your tests)
+
+Inspection
+65/125 pts: See inspection.md
+
+You received the same score on this test run as on the previous.
+
+Total: 130/195 pts
