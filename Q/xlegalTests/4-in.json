@@ -1,0 +1,1 @@
+[{"map": [[0, [0, {"color": "red", "shape": "star"}]]], "tile*":  180, "players": [{"score": 5, "tile*": []}, 2, 3, 4]}, [{"coordinate": {"row": 0, "column": 1}, "1tile": {"color": "red", "shape": "circle"}}]]

@@ -1,0 +1,74 @@
+# Plan
+
+## Map
+
+### Implmentation
+
+#### Note: [...] is a name
+
+[Status] enum of statuses
+	 [success]
+	 [failure]
+
+[Position] represents a position
+	   [row]
+	   [column]
+
+[Board] represents the playing field
+	Data:
+		[peices] 2D python list of Pieces: 	location in the lists is the location on the board
+	Methods:
+		[__self__] args([rows], [columns], [tiles], [pieces]) returns()
+		[place_pieces] args([pieces],[posistions]) returns(Status)
+		[get_number_columns] args() returns(int):  get the number columns in the board
+		[get_number_rows] args() returns(int): gets the number of rows in the board
+	
+[Shape] Enum of piece type
+	[star]
+	[8star]
+	[square]
+	[cirlce]
+	[clover]
+	[diamond]
+	
+[Color] Enum of piece color
+	[red]
+	[green]
+	[blue]
+	[yellow]
+	[orange]
+	[purple]
+
+[Piece] class reperesenting a piece
+	Data:
+		[Shape]
+		[Color]
+
+[Turn] enum representing the turn types
+       [pass]
+       [exchange]
+       [place]
+
+[Player] class representing a player
+	 Data:
+		[age]: the numer of days old the player is
+		[points]: the number of points the player has scored
+		[tiles]: List of Tile, the tiles in the players possesion
+
+[Referee] class representing a referee
+	  Data:
+		[board]: a Board
+		[unused_pieces]: min_heap of unused pieces, each peice is assigned a random value upon inserting to make random draws easy
+		[player_choices]: a list of Turn
+	  Method:
+		[number_unused] args() returns(int): returns the number of unused pieces
+		[take_turn] args([turn], [tiles=None], [locations=None]): takes a turn
+
+[Game] class representing a game
+       Data:
+		[referee]: the referee for the game
+		[players]: list of Player, the players in the game
+		[turn_queue]: a FILO queue of the players turns, when a player takes a turn, it is deleted and inserted
+       Method:
+		[turn_order] args() returns(list): returns the order of the turns as a list
+
